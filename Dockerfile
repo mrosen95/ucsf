@@ -1,6 +1,6 @@
 FROM python:3.6
 # Create app directory
-WORKDIR /usr/app/src
+WORKDIR /usr/app
 
 # Install app dependencies
 RUN apt-get update
