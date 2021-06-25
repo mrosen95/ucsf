@@ -66,14 +66,12 @@ class PDFFile:
 
     def __read_words_on_page(self, page_number):
         boxes = pytesseract.image_to_data(self.page(page_number))
-        print(pytesseract.image_to_string(self.page(page_number)))
         words = []
         headers = []
         for i, line in enumerate(boxes.splitlines()):
             line = line.split()
             if i == 0:
                 headers = line
-                print(line)
                 continue
 
             # If no text value is present, the number of values in the line
