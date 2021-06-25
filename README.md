@@ -26,12 +26,12 @@ We provide some examples in the package of pdfs to run a redaction on
 
 However if you want to upload more files please run the following command.
 ```
-docker cp <local_file_path> redact-pii:files/<file_name>
+sudo docker cp <local_file_path> redact-pii:files/<file_name>
 ```
 
 Additionally once you have run the program you will need to retrieve the file
 from the docker container.
 
 ```
-docker cp redact-pii:redacted/<file_name> <local_file_path>
+sudo docker cp redact-pii:redacted/<file_name> <local_file_path>
 ```
