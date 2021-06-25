@@ -98,7 +98,6 @@ class BillingAddress(Template):
             return text
 
         for match in matches[0]:
-            print(type(match))
             # This empty space will occur in instances where there is no second
             # match.
             if match == ' ':
@@ -108,5 +107,4 @@ class BillingAddress(Template):
             for i in range(len(words)):
                 words[i] = '{{PHI}}'
             text = text.replace(match, ' '.join(words))
-            print(text)
         return text
