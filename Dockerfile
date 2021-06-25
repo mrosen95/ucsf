@@ -8,6 +8,7 @@ RUN apt install -y libgl1-mesa-glx poppler-utils tesseract-ocr libtesseract-dev
 
 COPY ./requirements.txt ./requirements.txt
 COPY ./files ./files
+COPY ./redacted ./redacted
 
 # Install pythong dependencies
 RUN pip3 install -r requirements.txt
